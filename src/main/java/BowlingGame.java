@@ -1,7 +1,7 @@
 public class BowlingGame {
     public int calculate(int[] bowls) {
         int sumScore = 0;
-        int frames =0;
+        double frames =0;
         for (int i = 0; i < bowls.length; i++) {
             if(frames ==10) break;
             if(bowls[i] == 10){
@@ -12,7 +12,10 @@ public class BowlingGame {
                 i++;
                 frames++;
             }
-            else sumScore += bowls[i];
+            else {
+                sumScore += bowls[i];
+                frames += 0.5;
+            }
         }
         return  sumScore;
     }
