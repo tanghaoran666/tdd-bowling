@@ -22,4 +22,10 @@ public class BowlingGameTest {
         int result = bowlingGame.calculate(new int[]{10,10,10,10,10,10,10,10,10,10,10,10});
         assertEquals(300,result);
     }
+
+    @Test
+    void should_return_150_when_calculate_given_all_5(){
+        int result = bowlingGame.calculate(new int[]{5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5});
+        assertEquals(150,result);
+    }
 }

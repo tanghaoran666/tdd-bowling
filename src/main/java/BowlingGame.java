@@ -4,7 +4,10 @@ public class BowlingGame {
         for (int i = 0; i < 10; i++) {
             if(bowls[i]==10){
                 sumScore += 30;
-            }else sumScore += bowls[i];
+            }else if(bowls[i]==5){
+                sumScore += 15;
+            }
+            else sumScore += bowls[i];
 
         }
         return  sumScore;
