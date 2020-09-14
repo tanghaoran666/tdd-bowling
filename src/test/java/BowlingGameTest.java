@@ -13,7 +13,13 @@ public class BowlingGameTest {
 
     @Test
     void should_return_0_when_calculate_given_all_0(){
-        int result = bowlingGame.calculate(new int[]{ 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0});
+        int result = bowlingGame.calculate(new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0});
         assertEquals(0,result);
+    }
+
+    @Test
+    void should_return_300_when_calculate_given_all_10(){
+        int result = bowlingGame.calculate(new int[]{10,10,10,10,10,10,10,10,10,10,10,10});
+        assertEquals(300,result);
     }
 }

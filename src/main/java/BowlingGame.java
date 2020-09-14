@@ -1,5 +1,14 @@
 public class BowlingGame {
     public int calculate(int[] bowls) {
-        return 0;
+        int sumScore = 0;
+        for (int i = 0; i < 10; i++) {
+            if(bowls[i]==10){
+                sumScore += 30;
+            }else sumScore += bowls[i];
+
+        }
+        return  sumScore;
     }
+
+
 }
