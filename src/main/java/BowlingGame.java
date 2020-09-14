@@ -1,14 +1,18 @@
 public class BowlingGame {
     public int calculate(int[] bowls) {
         int sumScore = 0;
-        for (int i = 0; i < 10; i++) {
-            if(bowls[i]==10){
-                sumScore += 30;
-            }else if(bowls[i]==5){
-                sumScore += 15;
+        int frames =0;
+        for (int i = 0; i < bowls.length; i++) {
+            if(frames ==10) break;
+            if(bowls[i] == 10){
+                sumScore += 10 +bowls[i+1] + bowls[i+2];
+                frames++;
+            }else if(i<bowls.length-1 && bowls[i]+bowls[i+1]==10){
+                sumScore += 10 +bowls[i+2];
+                i++;
+                frames++;
             }
             else sumScore += bowls[i];
-
         }
         return  sumScore;
     }

@@ -28,4 +28,18 @@ public class BowlingGameTest {
         int result = bowlingGame.calculate(new int[]{5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5});
         assertEquals(150,result);
     }
+
+    @Test
+    void should_return_126_when_calculate_given_three_10_2_3_5_5(){
+        int result = bowlingGame.calculate(new int[]{10,2,3,5,5,10,2,3,5,5,10,2,3,5,5,7,2});
+        assertEquals(126,result);
+    }
+
+    @Test
+    void should_return_90_when_calculate_given_ten_9_0(){
+        int result = bowlingGame.calculate(new int[]{9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0,9,0});
+        assertEquals(90,result);
+    }
+
+
 }
