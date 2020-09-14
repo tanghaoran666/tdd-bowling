@@ -43,8 +43,8 @@ public class BowlingGameTest {
 
     @Test
     void should_return_167_when_calculate_given_random(){
-        int result = bowlingGame.calculate(new int[]{10,7,3,9,0,10,0,8,8,2,0,6,10,10,10,8,3});
-        assertEquals(169,result);
+        int result = bowlingGame.calculate(new int[]{10,7,3,8,0,10,0,8,8,2,0,6,10,10,10,7,1});
+        assertEquals(163,result);
     }
 
 }

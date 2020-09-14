@@ -3,6 +3,8 @@ public class BowlingGame {
         int sumScore = 0;
         double frames =0;
         for (int i = 0; i < bowls.length; i++) {
+            System.out.println("---------i="+i);
+            System.out.println("---------freames="+frames);
             if(frames ==10) break;
             if(bowls[i] == 10){
                 sumScore += 10 +bowls[i+1] + bowls[i+2];
@@ -13,9 +15,11 @@ public class BowlingGame {
                 frames++;
             }
             else {
-                sumScore += bowls[i];
-                frames += 0.5;
+                sumScore += bowls[i] + bowls[i+1];
+                frames ++;
+                i++;
             }
+            System.out.println("------------score=" + sumScore);
         }
         return  sumScore;
     }
