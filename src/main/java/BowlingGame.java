@@ -5,8 +5,10 @@ public class BowlingGame {
     public int calculate(int[] bowls) {
         int sumScore = 0;
         int frames =0;
+        git
         for (int i = 0; i < bowls.length; i++) {
             if(frames>= FRAMES_COUNT) break;
+
             if(isStrike(bowls,i)){
                 sumScore += getStrikeScore(bowls, i);
             }
