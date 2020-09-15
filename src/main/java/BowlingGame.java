@@ -1,9 +1,12 @@
 public class BowlingGame {
+
+    public static final int FRAMES_COUNT = 10;
+
     public int calculate(int[] bowls) {
         int sumScore = 0;
-        double frames =0;
+        int frames =0;
         for (int i = 0; i < bowls.length; i++) {
-            if(frames>= 10) break;
+            if(frames>= FRAMES_COUNT) break;
             if(isStrike(bowls,i)){
                 sumScore += getStrikeScore(bowls, i);
             }
@@ -12,7 +15,6 @@ public class BowlingGame {
                     sumScore += getSpareScore(bowls, i);
                 } else sumScore += getNormalScore(bowls, i);
                 i++;
-
             }
             frames ++;
         }
